@@ -1,13 +1,18 @@
-Package: hubconnectr
-Title: What the Package Does (One Line, Title Case)
+Package: mascot
+Title: Macroscale Structural Connectomes via Tractography
 Version: 0.0.0.9000
 Authors@R: 
     person("Aymeric", "Stamm", , "aymeric.stamm@math.cnrs.fr", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-8725-3654"))
-Description: What the package does (one paragraph).
+Description: This is a data package providing access to recent macroscale 
+    structural connectomes of the Human brain obtained from diffusion MRI data 
+    through diffusion modeling and subsequent so-called tractography.
 License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
-URL: https://github.com/astamm/hubconnectr
-BugReports: https://github.com/astamm/hubconnectr/issues
+RoxygenNote: 7.2.0
+URL: https://github.com/astamm/mascot
+BugReports: https://github.com/astamm/mascot/issues
+Depends: 
+    R (>= 2.10)
+LazyData: true
