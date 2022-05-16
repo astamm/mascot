@@ -14,7 +14,9 @@ coverage](https://codecov.io/gh/astamm/mascot/branch/master/graph/badge.svg)](ht
 status](https://www.r-pkg.org/badges/version/mascot)](https://CRAN.R-project.org/package=mascot)
 <!-- badges: end -->
 
-The goal of mascot is to …
+The goal of mascot is to provide easy access to recent macroscale
+structural connectomes of the Human brain obtained from diffusion MRI
+data through diffusion modeling and subsequent so-called tractography.
 
 ## Installation
 
