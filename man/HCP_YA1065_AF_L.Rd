@@ -6,15 +6,11 @@
 \title{HCP-YA1065 Left Arcuate Fasciculus}
 \format{
 An object of class \code{maf_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 9174998 rows and 5 columns.
-
-An object of class \code{maf_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 9174998 rows and 5 columns.
 }
 \source{
 \url{https://brain.labsolver.org/hcp_trk_atlas.html}
 }
 \usage{
-HCP_YA1065_AF_L
-
 HCP_YA1065_AF_L
 }
 \description{
