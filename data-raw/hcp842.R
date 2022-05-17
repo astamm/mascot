@@ -3,6 +3,8 @@
 library(riot)
 library(usethis)
 
+utils::untar("data-raw/HCP842_20220516.tar.xz", exdir = "data-raw/")
+
 for (f in list.files("data-raw/HCP842_20220516", recursive = TRUE, full.names = TRUE, include.dirs = FALSE)) {
   # Setup tract name
   l <- strsplit(f, "/")[[1]]
@@ -12,25 +14,11 @@ for (f in list.files("data-raw/HCP842_20220516", recursive = TRUE, full.names = 
   cli::cli_alert_info("Processing {tract_name} tract...")
 
   # Grab the data
-  R.utils::gunzip(f, remove = FALSE)
-  df <- read_fascicles(fs::path_ext_remove(f))
-  unlink(fs::path_ext_remove(f))
+  df <- read_fascicles(f)
 
   # Save the data
   assign(tract_name, df)
   do.call("use_data", list(as.name(tract_name), overwrite = TRUE, compress = "xz", version = 3))
 }
 
-#' #' HCP-YA842 tractography atlas
-#' #'
-#' #' HCP-YA842 tractography atlas uses [FSL’s FA
-#' #' map](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Atlases) as its reference space,
-#' #' which averages from 58 FA images in the MNI152 coordinate.
-#' #'
-#' #' @format A list with XXX rows and XX variables:
-#' #' @source \url{https://brain.labsolver.org/hcp_trk_atlas.html}
-#' #' @references Yeh FC, Panesar S, Fernandes D, Meola A, Yoshino M,
-#' #'   Fernandez-Miranda JC, Vettel JM, Verstynen T. Population-averaged atlas of
-#' #'   the macroscale human structural connectome and its network topology.
-#' #'   Neuroimage. 2018 Sep 1;178:57-68. (original data)
-#' "hcp842"
+fs::dir_delete("data-raw/HCP842_20220516")

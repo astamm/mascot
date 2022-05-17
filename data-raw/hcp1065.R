@@ -3,6 +3,8 @@
 library(riot)
 library(usethis)
 
+utils::untar("data-raw/HCP1065_20220511.tar.xz", exdir = "data-raw/")
+
 for (f in list.files("data-raw/HCP1065_20220511", recursive = TRUE, full.names = TRUE, include.dirs = FALSE)) {
   # Setup tract name
   l <- strsplit(f, "/")[[1]]
@@ -12,11 +14,11 @@ for (f in list.files("data-raw/HCP1065_20220511", recursive = TRUE, full.names =
   cli::cli_alert_info("Processing {tract_name} tract...")
 
   # Grab the data
-  R.utils::gunzip(f, remove = FALSE)
-  df <- read_fascicles(fs::path_ext_remove(f))
-  unlink(fs::path_ext_remove(f))
+  df <- read_fascicles(f)
 
   # Save the data
   assign(tract_name, df)
   do.call("use_data", list(as.name(tract_name), overwrite = TRUE, compress = "xz", version = 3))
 }
+
+fs::dir_delete("data-raw/HCP1065_20220511")

@@ -16,3 +16,6 @@ BugReports: https://github.com/astamm/mascot/issues
 Depends: 
     R (>= 2.10)
 LazyData: true
+Suggests: 
+    fs,
+    riot
