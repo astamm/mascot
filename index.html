@@ -68,22 +68,29 @@
 <div class="page-header"><h1 id="mascot">mascot<a class="anchor" aria-label="anchor" href="#mascot"></a>
 </h1></div>
 <!-- badges: start -->
-<p>The goal of mascot is to provide easy access to recent macroscale structural connectomes of the Human brain obtained from diffusion MRI data through diffusion modeling and subsequent so-called tractography.</p>
+<p>The goal of <a href="https://astamm.github.io/mascot/" class="external-link"><strong>mascot</strong></a> is to provide easy access to recent macroscale structural connectomes of the Human brain obtained from diffusion MRI data through diffusion modeling and subsequent so-called tractography.</p>
+<div class="section level2">
+<h2 id="datasets">Datasets<a class="anchor" aria-label="anchor" href="#datasets"></a>
+</h2>
+<p>Currently, the package contains:</p>
+<ul><li>the HCP-YA845 and HCP-YA1065 tractography atlases from Yeh FC, Panesar S, Fernandes D, Meola A, Yoshino M, Fernandez-Miranda JC, Vettel JM, Verstynen T. Population-averaged atlas of the macroscale human structural connectome and its network topology. Neuroimage. 2018 Sep 1;178:57-68 (2021 update).</li></ul>
+<p>Each white matter fascicle comes in the form of a <a href="https://tibble.tidyverse.org" class="external-link">tibble</a> in which each row is a point characterized by the following five variables:</p>
+<ul>
+<li>
+<code>X</code>, <code>Y</code>, <code>Z</code>: 3D coordinates of the current point;</li>
+<li>
+<code>PointId</code>: Identification number of the current point among all points of the streamline it belongs to;</li>
+<li>
+<code>StreamlineId</code>: Identification number of the streamline which the current point belongs to.</li>
+</ul>
+</div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>You can install the development version of mascot from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"astamm/mascot"</span><span class="op">)</span></code></pre></div>
-</div>
-<div class="section level2">
-<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
-</h2>
-<p>This is a basic example which shows you how to solve a common problem:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/astamm/mascot" class="external-link">mascot</a></span><span class="op">)</span>
-<span class="co">## basic example code</span></code></pre></div>
+<code class="sourceCode R"><span class="co"># install.packages("remotes")</span>
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"astamm/mascot"</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
   </div>
@@ -124,8 +131,6 @@
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://github.com/astamm/mascot/actions" class="external-link"><img src="https://github.com/astamm/mascot/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
-<li><a href="https://github.com/astamm/mascot/actions" class="external-link"><img src="https://github.com/astamm/mascot/workflows/test-coverage/badge.svg" alt="test-coverage"></a></li>
-<li><a href="https://app.codecov.io/gh/astamm/mascot?branch=master" class="external-link"><img src="https://codecov.io/gh/astamm/mascot/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
 <li><a href="https://github.com/astamm/mascot/actions" class="external-link"><img src="https://github.com/astamm/mascot/workflows/pkgdown/badge.svg" alt="pkgdown"></a></li>
 <li><a href="https://CRAN.R-project.org/package=mascot" class="external-link"><img src="https://www.r-pkg.org/badges/version/mascot" alt="CRAN status"></a></li>
 </ul>
