@@ -2,8 +2,25 @@ Package: mascot
 Title: Macroscale Structural Connectomes via Tractography
 Version: 0.0.0.9000
 Authors@R: 
-    person("Aymeric", "Stamm", , "aymeric.stamm@math.cnrs.fr", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0002-8725-3654"))
+    c(person("Aymeric", "Stamm", role = c("aut", "cre"), 
+             email = "aymeric.stamm@math.cnrs.fr", 
+             comment = c(ORCID = "0000-0002-8725-3654")),
+      person("Fang-Cheng", "Yeh", role = "ctb",
+             comment = "Author of the HCP-YA842 and HCP-YA1065 atlas"),
+      person("Sandip", "Panesar", role = "ctb",
+             comment = "Author of the HCP-YA842 and HCP-YA1065 atlas"),
+      person("David", "Fernandes", role = "ctb",
+             comment = "Author of the HCP-YA842 and HCP-YA1065 atlas"),
+      person("Antonio", "Meola", role = "ctb",
+             comment = "Author of the HCP-YA842 and HCP-YA1065 atlas"),
+      person("Masanori", "Yoshino", role = "ctb",
+             comment = "Author of the HCP-YA842 and HCP-YA1065 atlas"),
+      person("Juan C.", "Fernandez-Miranda", role = "ctb",
+             comment = "Author of the HCP-YA842 and HCP-YA1065 atlas"),
+      person("Jean M.", "Vettel", role = "ctb",
+             comment = "Author of the HCP-YA842 and HCP-YA1065 atlas"),
+      person("Timothy", "Verstynen", role = "ctb",
+             comment = "Author of the HCP-YA842 and HCP-YA1065 atlas"))
 Description: This is a data package providing access to recent macroscale 
     structural connectomes of the Human brain obtained from diffusion MRI data 
     through diffusion modeling and subsequent so-called tractography.

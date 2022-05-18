@@ -19,5 +19,17 @@ Useful links:
 \author{
 \strong{Maintainer}: Aymeric Stamm \email{aymeric.stamm@math.cnrs.fr} (\href{https://orcid.org/0000-0002-8725-3654}{ORCID})
 
+Other contributors:
+\itemize{
+  \item Fang-Cheng Yeh (Author of the HCP-YA842 and HCP-YA1065 atlas) [contributor]
+  \item Sandip Panesar (Author of the HCP-YA842 and HCP-YA1065 atlas) [contributor]
+  \item David Fernandes (Author of the HCP-YA842 and HCP-YA1065 atlas) [contributor]
+  \item Antonio Meola (Author of the HCP-YA842 and HCP-YA1065 atlas) [contributor]
+  \item Masanori Yoshino (Author of the HCP-YA842 and HCP-YA1065 atlas) [contributor]
+  \item Juan C. Fernandez-Miranda (Author of the HCP-YA842 and HCP-YA1065 atlas) [contributor]
+  \item Jean M. Vettel (Author of the HCP-YA842 and HCP-YA1065 atlas) [contributor]
+  \item Timothy Verstynen (Author of the HCP-YA842 and HCP-YA1065 atlas) [contributor]
+}
+
 }
 \keyword{internal}
